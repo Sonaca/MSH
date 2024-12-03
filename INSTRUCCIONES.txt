@@ -1,0 +1,6 @@
+INSTRUCCIONES 
+
+gcc -c jobs.c -o jobs.o // Convertimos a un .o para poder crear nuestra librería estática
+ar rcs libjobs.a jobs.o
+
+gcc -Wall -Wextra msh.c libparser.a libjobs.a -o msh -static
